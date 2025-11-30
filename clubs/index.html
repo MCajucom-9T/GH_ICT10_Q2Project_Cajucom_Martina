@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q2 PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- external css -->
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <!-- python link-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- bootstrap link -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Akaya+Kanadaka&family=Alkatra:wght@400..700&family=Audiowide&family=Bokor&family=Bree+Serif&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cookie&family=DynaPuff:wght@400..700&family=Eagle+Lake&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Great+Vibes&family=Lexend+Giga:wght@100..900&family=Madimi+One&family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <!-- google fonts link -->
+
+</head>
+<body>
+    <div class="navb">
+        <ul class="nav nav-pills mx-auto">
+            <li class="nav-item ">
+                <img src="emblem.jpg" class="logo"> 
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="../grade/index.html">Student Grades</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" id="activepill" href="../clubs/index.html">Club List</a>
+            </li>
+
+            <form action="/search" method="get">
+                <input type="search" class="search" placeholder=" Search. . ." name="query">
+                <button type="submit" class="btn subtn">⌕</button>
+            </form>
+        </ul>
+    </div>
+    <!-- navbar -->
+
+    <div class="home" id="home">
+      <div class="hero">
+        <div class="hero-content container">
+            <h1>Club List</h1>
+            <h2>—View all up and coming, available clubs!</h2>
+            <p>—UPMS offers an array of interesting clubs sure to fulfil you hearts desire. Click here to view more info about the clubs we offer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container col-sm-12 mt-3">
+        <h2 id="header">Club Information</h2>
+        <hr>
+
+        <form>
+            <div class="row mb-3">
+                <div class="col-md-6"><h2>Club List:</h2></div>
+                <div class="col-md-6"><h2>Club Details:</h2></div>
+                
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="form-check">
+                                <button type="button" class="btn btn-dark" py-click="socsci_present">Display Information</button>
+                                <label class="form-check-label">Social Studies: SocSci</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+					<div class="card">
+                        <div class="card-body text-center">
+                            <div class="form-check">
+                                <button type="button" class="btn btn-dark" py-click="glee_present">Display Information</button>
+                                <label class="form-check-label" for="product1">Music: Glee Club</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+					<div class="card">
+                        <div class="card-body text-center">
+                            <div class="form-check">
+                                <button type="button" class="btn btn-dark" py-click="math_present">Display Information</button>
+                                <label class="form-check-label">Math: Math Guild</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- This is where the buttons to display info lie -->
+
+                <div class="col-md-6">
+                    <h6 id="name">Name: </h6>
+                    <h6 id="time">Time: </h6>
+                    <h6 id="des">Description: </h6>
+                    <h6 id="loc">Location: </h6>
+                    <h6 id="ad">Advisor: </h6>
+                    <h6 id="num">Quota: </h6>
+                    <h6 id="category">Category: </h6>
+                </div>
+                <!-- This is where the information will be displayed -->
+        </form>
+        </div>
+    </div> 
+    
+    <br>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
